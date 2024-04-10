@@ -14,9 +14,9 @@ module.exports.signup=async(req,res)=>{
         if(err){
            return next(err);
         }
-           let redirectUrl=res.locals.redirectUrl || "/listings";
+           
         req.flash("success","Welcome to Wanderlust");
-        res.redirect(req.session.redirectUrl);
+        res.redirect("/listings");
        });
     }
     catch(e){
